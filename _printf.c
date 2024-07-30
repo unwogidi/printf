@@ -75,6 +75,10 @@ int (*get_print_func(char c))(va_list)
 	{
 		return (print_percent);
 	}
+	if (c == 'd' || c == 'i')
+	{
+		return (print_int);
+	}
 	return (NULL);
 }
 
