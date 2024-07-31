@@ -23,24 +23,17 @@ int print_string(va_list args)
 	char *s = va_arg(args, char *);
 	int count = 0;
 
-	if (s)
+	if (!s)
 	{
-		while (*s)
-		{
-			_putchar(*s++);
-			count++;
-		}
+		s = "(nil)";
 	}
-	else
-	{
-		char *nil = "(nil)";
 
-		while (*nil)
-		{
-			_putchar(*nil++);
-			count++;
-		}
+	while (*s)
+	{
+		_putchar(*s++);
+		count++;
 	}
+
 	return (count);
 }
 
