@@ -3,15 +3,13 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
-int _putchar(char c);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
-int (*get_print_func(char c))(va_list);
 int _printf(const char *format, ...);
-int print_int(va_list args);
-char *int_to_str(int n, char *buffer);
-int count_digits(int n);
+void checks_char(const char *format, va_list args_list, int *char_print);
+void checks_specifier(const char *format, va_list args_list, int *char_print);
+void print_char(char c, int *char_print);
+void print_string(char *str, int *char_print);
+void print_percent(int *char_print);
 
 #endif /* MAIN_H */
