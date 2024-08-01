@@ -6,10 +6,10 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-void checks_char(const char *format, va_list args_list, int *char_print);
-void checks_specifier(const char *format, va_list args_list, int *char_print);
-void print_char(char c, int *char_print);
-void print_string(char *str, int *char_print);
-void print_percent(int *char_print);
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int (*get_print_func(char c))(va_list);
 
 #endif /* MAIN_H */
