@@ -11,5 +11,8 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int (*get_print_func(char c))(va_list);
+int count_digits(int n);
+char *int_to_str(int n, char *buffer);
+int print_int(va_list args);
 
 #endif /* MAIN_H */
